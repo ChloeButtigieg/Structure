@@ -7,18 +7,14 @@ public class DivideSubstract implements DivideAlgorithm {
         this.denominator = b;
     }
 
-    public int divisionEuclidienne() {
+    @Override
+    public int run(int numerator, int denominator) {
         int resultat = 0;
         while(this.numerator >= this.denominator) {
             this.numerator = this.numerator - this.denominator;
             resultat = resultat + 1;
         }
         return resultat;
-    }
-
-    @Override
-    public int run(int numerator, int denominator) {
-        return 0;
     }
 
     @Override
